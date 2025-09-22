@@ -21,12 +21,3 @@ The script uses a two-phase training strategy, combining two common transfer lea
 
 ---
 
-## Code Breakdown
-
-### 1. Model Setup
-
-First, the ResNet50 base model is loaded without its original classification head (`include_top=False`). The `weights="imagenet"` argument ensures the pre-trained weights are loaded.
-
-```python
-# Load pre-trained ResNet50
-base_model = ResNet50(weights="imagenet", include_top=False, input_shape=(224, 224, 3))
